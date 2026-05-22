@@ -32,8 +32,18 @@ public class UIManager : MonoBehaviour
         }
         if(Seconds >= 5)
         {
-            GameManager.Instance.mru.speed *= 0;
-            Seconds = 5;
+            GameManager.Instance.mru.speed = 0;
+            Debug.Log("The object has stopped at : " + 5 + " seconds");
+        }
+
+        if (Seconds >=2)
+        {
+            GameManager.Instance.mruv.speed += GameManager.Instance.mruv.desacceleration;
+        }
+
+        if(GameManager.Instance.mruv.speed <= 0)
+        {
+            GameManager.Instance.mruv.speed = 0;
         }
     }
 }
