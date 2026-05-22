@@ -13,14 +13,20 @@ public class TestMRU : MonoBehaviour
     void Update()
     {
         Test();
+        SpeedTest();
     }
     public void Test()
     {
         Vector3 dir = Vector3.right;
         transform.Translate(dir * speed * Time.deltaTime);
-        if (speed <= 0)
+        
+    }
+    public void SpeedTest()
+    {
+        if (GameManager.Instance.uiManager.Seconds >= 5)
         {
-            Debug.Log("The object has stopped moving : " + gameObject.transform.position);
-        }
+            speed *= 0;
+            Debug.Log("The object has stopped moving at : " + 5 + " second and onto position : " + gameObject.transform.position);         
+        }       
     }
 }

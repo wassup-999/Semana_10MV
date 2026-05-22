@@ -29,21 +29,6 @@ public class UIManager : MonoBehaviour
         else
         {           
              timer.text = "Current time : " + Minutes.ToString() + ":" + Seconds.ToString("f0");
-        }
-        if(Seconds >= 5)
-        {
-            GameManager.Instance.mru.speed = 0;
-            Debug.Log("The object has stopped at : " + 5 + " seconds");
-        }
-
-        if (Seconds >=2)
-        {
-            GameManager.Instance.mruv.speed += GameManager.Instance.mruv.desacceleration;
-        }
-
-        if(GameManager.Instance.mruv.speed <= 0)
-        {
-            GameManager.Instance.mruv.speed = 0;
-        }
+        }     
     }
 }

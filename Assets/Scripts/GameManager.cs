@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; 
     public UIManager uiManager;
     public TestMRU mru;
-    public TestMRUV mruv;
+    public TestMRUV mruv;   
     private void Awake()
     {
         if (Instance == null)
@@ -19,4 +19,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 }
