@@ -26,14 +26,19 @@ public class CinemachineController : MonoBehaviour
             {
                 CameraTest1.Priority = 1;
                 CameraTest2.Priority = 0;
-                    //CamerasTest = Test.MRUV;
+                if (GameManager.Instance.mru.speed <= 0)
+                {               
+                    CamerasTest = Test.MRUV;
                 }
+            }
             break;
 
             case Test.MRUV:
             {
                 CameraTest2.Priority = 1;
                 CameraTest1.Priority = 0;
+                GameManager.Instance.mruv.Test();              
+                Debug.Log("Current MRUV obj Speed : " + GameManager.Instance.mruv.speed);
             }
             break;
         }

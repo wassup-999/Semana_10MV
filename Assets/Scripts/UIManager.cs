@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
     [Header("References")]
     public TextMeshProUGUI timer;
     [Header("Variables")]
-    public float Minutes;
+    
     public float Seconds;
     void Start()
     {
@@ -22,13 +22,13 @@ public class UIManager : MonoBehaviour
     public void TimeOnScreen()
     {
         Seconds += Time.deltaTime;
-        if (Seconds < 9.9f && Minutes < 1)
+        if (Seconds < 9.9f)
         {       
-            timer.text = "Current time : " + Minutes.ToString() + ": 0" + Seconds.ToString("f0");          
+            timer.text = "Current time : " + "0" + Seconds.ToString("f0");          
         }
         else
         {           
-             timer.text = "Current time : " + Minutes.ToString() + ":" + Seconds.ToString("f0");
+             timer.text = "Current time : " + Seconds.ToString("f0");
         }     
     }
 }

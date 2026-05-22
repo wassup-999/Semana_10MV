@@ -26,7 +26,8 @@ public class TestMRU : MonoBehaviour
         if (GameManager.Instance.uiManager.Seconds >= 5)
         {
             speed *= 0;
-            Debug.Log("The object has stopped moving at : " + 5 + " second and onto position : " + gameObject.transform.position);         
+            Debug.Log("The object has stopped moving at : " + 5 + " seconds and onto position : " + gameObject.transform.position);         
+            GameManager.Instance.uiManager.Seconds = 0;
         }       
     }
 }

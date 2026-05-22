@@ -269,8 +269,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.050878525, y: 0.92884034, z: -0.1391768, w: -0.3395539}
-  m_LocalPosition: {x: 50.20719, y: 11.185081, z: -36.05544}
+  m_LocalRotation: {x: 0.1368522, y: -0.27888265, z: 0.04018822, w: 0.94967407}
+  m_LocalPosition: {x: 12.558308, y: 7.8359613, z: -19.538343}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -997,7 +997,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   timer: {fileID: 446420270}
-  Minutes: 0
   Seconds: 0
 --- !u!4 &1612761804
 Transform:
@@ -1236,6 +1235,18 @@ PrefabInstance:
       value: SphereTest
       objectReference: {fileID: 0}
     - target: {fileID: 8450953431495033834, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.3241785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450953431495033834, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.3241785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450953431495033834, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.3241785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450953431495033834, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
       objectReference: {fileID: 0}
@@ -1280,8 +1291,24 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8479162307378103099, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: speed.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479162307378103099, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: acceleration
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479162307378103099, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: CurrentSpeed.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479162307378103099, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
       propertyPath: desacceleration
       value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479162307378103099, guid: f885c1dd907e41a4a907d410009e5532, type: 3}
+      propertyPath: ObjectiveSpeed.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

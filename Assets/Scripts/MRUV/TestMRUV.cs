@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class TestMRUV : MonoBehaviour
 {
+   
     [Header("Parameters")]
     public float speed;
-    public float desacceleration;
+    public float aceleracion;
     void Start()
     {
         
@@ -13,26 +14,30 @@ public class TestMRUV : MonoBehaviour
     
     void Update()
     {
-        Test();
-        TestSpeed();
+        
     }
+    /*
     public void Test()
     {
-        Vector3 dir = Vector3.forward;
-        transform.Translate(dir * speed * Time.deltaTime);
-            
+        if (speed > 0)
+        {
+            speed += acceleracion * Time.deltaTime;            
+            if (speed < 0) speed = 0;
+            transform.Translate(transform.forward * speed * Time.deltaTime);
+        }
     }
-    public void TestSpeed()
+    */
+    public void Test()
     {
-        if (GameManager.Instance.uiManager.Seconds >= 2)
+        if(speed > 0)
         {
-            speed += desacceleration;          
-            Debug.Log("");
+            Debug.Log("The object is desacelerating");
+            speed += aceleracion * Time.deltaTime;           
+            if (speed <= 0)
+            {
+                speed = 0;
+            }
+            transform.Translate(transform.forward * speed * Time.deltaTime);
         }
-        if(speed <= 0)
-        {
-            speed = 0;
-            //Debug.Log("The object has stopped moving at : " + GameManager.Instance.uiManager.Seconds + " seconds and onto position : " + gameObject.transform.position);
-        }
-    }
+    }   
 }
